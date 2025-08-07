@@ -72,27 +72,15 @@
     }
   },
   {
-    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/elisza.png",
-    "name": "Elisza Rahmawati",
-    "department": "Chemistry",
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/gm/agatha.png",
+    "name": "Agatha Samuel Sitompul",
+    "department": "Electrical Engineering",
     "year": "2022",
     "position": "Studying",
     "socialMedia": {
-      "instagram": "https://instagram.com/eliszara_",
+      "instagram": "https://instagram.com/agatha.sitompul/",
       "github": "https://github.com/",
-      "linkedin": "https://www.linkedin.com/in/elisza-rahmawati-0726a320a/"
-    }
-  },
-  {
-    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/mujianah.png",
-    "name": "Mujianah",
-    "department": "Chemistry",
-    "year": "2022",
-    "position": "Studying",
-    "socialMedia": {
-      "instagram": "https://instagram.com/mujiaanah_/",
-      "github": "https://github.com/bielnzar/",
-      "linkedin": "https://linkedin.com/in/mujianah-7424952b8/"
+      "linkedin": "https://linkedin.com/in/"
     }
   },
   {
@@ -105,18 +93,6 @@
       "instagram": "https://instagram.com/bagassurya543/",
       "github": "https://github.com/bagaswizard/",
       "linkedin": "https://linkedin.com/in/bagas-surya-wirawan-9348b3254/"
-    }
-  },
-  {
-    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/gm/agatha.png",
-    "name": "Agatha Samuel Sitompul",
-    "department": "Electrical Engineering",
-    "year": "2022",
-    "position": "Studying",
-    "socialMedia": {
-      "instagram": "https://instagram.com/agatha.sitompul/",
-      "github": "https://github.com/",
-      "linkedin": "https://linkedin.com/in/"
     }
   },
   {
@@ -165,6 +141,30 @@
       "instagram": "https://instagram.com/rayhan_fjr/",
       "github": "https://github.com/RayhanFJR",
       "linkedin": "https://linkedin.com/in/rayhanalfajri/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/elisza.png",
+    "name": "Elisza Rahmawati",
+    "department": "Chemistry",
+    "year": "2022",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/eliszara_",
+      "github": "https://github.com/",
+      "linkedin": "https://www.linkedin.com/in/elisza-rahmawati-0726a320a/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/mujianah.png",
+    "name": "Mujianah",
+    "department": "Chemistry",
+    "year": "2022",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/mujiaanah_/",
+      "github": "https://github.com/bielnzar/",
+      "linkedin": "https://linkedin.com/in/mujianah-7424952b8/"
     }
   }
 ]
