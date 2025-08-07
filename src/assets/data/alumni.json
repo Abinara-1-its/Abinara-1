@@ -1,0 +1,170 @@
+[
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/alumni/alumni_hasfi.svg",
+    "name": "Hashfi El Muhandish",
+    "department": "Electrical Engineering",
+    "year": "2020",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/muhandish/",
+      "github": "https://github.com/",
+      "linkedin": "https://linkedin.com/in/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/alumni/alumni_nabila.svg",
+    "name": "Nabila Amalia Putri",
+    "department": "Industrial Systems Engineering",
+    "year": "2021",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/nabyaap/",
+      "github": "https://github.com/",
+      "linkedin": "https://linkedin.com/in/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/alumni/alumni_hikam.svg",
+    "name": "Ahmad Ahlul Hikam",
+    "department": "Electrical Engineering",
+    "year": "2021",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/ahmad_hikam_2/",
+      "github": "https://github.com/",
+      "linkedin": "https://linkedin.com/in/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/alumni/alumni_shaldan.svg",
+    "name": "Laode Shaldan Falih",
+    "department": "Information Systems",
+    "year": "2021",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/shldnnnn/",
+      "github": "https://github.com/",
+      "linkedin": "https://linkedin.com/in/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/alumni/alumni_ahmad.svg",
+    "name": "Ahmad Prayoga",
+    "department": "Instrumentation Engineering",
+    "year": "2021",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/ahmad.pray/",
+      "github": "https://github.com/",
+      "linkedin": "https://linkedin.com/in/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/alumni/alumni_once.svg",
+    "name": "Once Oscar Archieniega",
+    "department": "Mechanical Engineering",
+    "year": "2021",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/ncscr08/",
+      "github": "https://github.com/",
+      "linkedin": "https://linkedin.com/in/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/elisza.png",
+    "name": "Elisza Rahmawati",
+    "department": "Chemistry",
+    "year": "2022",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/eliszara_",
+      "github": "https://github.com/",
+      "linkedin": "https://www.linkedin.com/in/elisza-rahmawati-0726a320a/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/mujianah.png",
+    "name": "Mujianah",
+    "department": "Chemistry",
+    "year": "2022",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/mujiaanah_/",
+      "github": "https://github.com/bielnzar/",
+      "linkedin": "https://linkedin.com/in/mujianah-7424952b8/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/bagas.png",
+    "name": "Bagas Surya Wirawan",
+    "department": "Electrical Engineering",
+    "year": "2022",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/bagassurya543/",
+      "github": "https://github.com/bagaswizard/",
+      "linkedin": "https://linkedin.com/in/bagas-surya-wirawan-9348b3254/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/gm/agatha.png",
+    "name": "Agatha Samuel Sitompul",
+    "department": "Electrical Engineering",
+    "year": "2022",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/agatha.sitompul/",
+      "github": "https://github.com/",
+      "linkedin": "https://linkedin.com/in/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/elec/figo.png",
+    "name": "Figo Arzaki Maulana",
+    "department": "Electrical Engineering",
+    "year": "2022",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/fi_arzaki/",
+      "github": "https://github.com/Lanove/",
+      "linkedin": "https://linkedin.com/in/figoarzaki/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/mech/faizul.png",
+    "name": "Faizzul Haq Alma'anizam Zami",
+    "department": "Industrial Mechanical Engineering",
+    "year": "2022",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/fahmi_zamzami324/",
+      "github": "https://github.com/fahmi324/",
+      "linkedin": "https://linkedin.com/in/faizzulhaq/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/mech/danial.png",
+    "name": "Muhammad Danial Azka Attaqi",
+    "department": "Electrical Engineering",
+    "year": "2022",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/mdanialazka/",
+      "github": "https://github.com/",
+      "linkedin": "https://linkedin.com/in/mdanialazka/"
+    }
+  },
+  {
+    "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/mech/rayhan.png",
+    "name": "Rayhan Al Fajri",
+    "department": "Mechanical Engineering",
+    "year": "2022",
+    "position": "Studying",
+    "socialMedia": {
+      "instagram": "https://instagram.com/rayhan_fjr/",
+      "github": "https://github.com/RayhanFJR",
+      "linkedin": "https://linkedin.com/in/rayhanalfajri/"
+    }
+  }
+]

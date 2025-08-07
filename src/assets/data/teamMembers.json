@@ -1,0 +1,261 @@
+{
+  "divisionLogos": {
+    "General Manager": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/logo/logo-elec.png",
+    "Official": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/logo/logo-offc.png",
+    "Programming": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/logo/logo-prog.png",
+    "Electrical": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/logo/logo-elec.png",
+    "Mechanical": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/logo/logo-mech.png"
+  },
+  "teamMembers": {
+    "General Manager": [
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/nasywa.png",
+        "name": "Nasywa Isna Shafriliya",
+        "department": "Medical Technology",
+        "year": "2023",
+        "position": "Head of Division",
+        "socialMedia": {
+          "instagram": "https://instagram.com/nasywais",
+          "github": "https://github.com/segokucing5k",
+          "linkedin": "linkedin.com/in/nasywa-isna-shafriliya-71120628b"
+        }
+      }
+    ],
+    "Official": [
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/dipta.png",
+        "name": "Dipta Sena Alfarehzi Djomi",
+        "department": "Medicine",
+        "year": "2024",
+        "position": "Head of Division",
+        "socialMedia": {
+          "instagram": "https://instagram.com/diptasena.djomi",
+          "github": "https://github.com/Diptasenaa",
+          "linkedin": "https://www.linkedin.com/in/diptasenadjomi/"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/alfa.png",
+        "name": "Alfa Na'ilah Ciwandani",
+        "department": "Medical Technology",
+        "year": "2023",
+        "position": "Senior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/alfanayla",
+          "github": "https://github.com/",
+          "linkedin": "https://www.linkedin.com/in/alfanailah/"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/bagas.png",
+        "name": "Bagas Rafi Dewantara",
+        "department": "Information System",
+        "year": "2023",
+        "position": "Senior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/bgasrafii",
+          "github": "https://github.com/",
+          "linkedin": "https://www.linkedin.com/in/bagasrafidewantara/"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/ibnu.png",
+        "name": "Ahmad Ibnu Athaillah",
+        "department": "Information Technology",
+        "year": "2024",
+        "position": "Junior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/nathaillah_",
+          "github": "https://github.com/",
+          "linkedin": "https://linkedin.com/"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/shinta.png",
+        "name": "Shinta Alya Ramadani",
+        "department": "Information Technology",
+        "year": "2024",
+        "position": "Junior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/shi.ntaar_/",
+          "github": "https://github.com/",
+          "linkedin": "https://www.linkedin.com/in/shinta-alya-ramadani-993385323/"
+        }
+      }
+    ],
+    "Programming": [
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/wayan.png",
+        "name": "I Wayan Firdaus Winarta Putra",
+        "department": "Biomedical Engineering",
+        "year": "2023",
+        "position": "Head of Division",
+        "socialMedia": {
+          "instagram": "https://instagram.com/iwayan_f.w.p",
+          "github": "https://github.com/",
+          "linkedin": "https://www.linkedin.com/in/iwayanfwp-24jul05/"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/nabiel.png",
+        "name": "Nabiel Nizar Anwari",
+        "department": "Information Technology",
+        "year": "2023",
+        "position": "Senior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/bielnzar_",
+          "github": "https://github.com/bielnzar",
+          "linkedin": "https://linkedin.com/nabiel-nizar-anwari/"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/nasywa.png",
+        "name": "Nasywa Isna Shafriliya",
+        "department": "Medical Technology",
+        "year": "2023",
+        "position": "Senior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/nasywais",
+          "github": "https://github.com/segokucing5k",
+          "linkedin": "linkedin.com/in/nasywa-isna-shafriliya-71120628b"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/qurrata.png",
+        "name": "Qurrata Ayun Kamil",
+        "department": "Informatics",
+        "year": "2024",
+        "position": "Junior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/ata_qurrata",
+          "github": "https://github.com/yukakeren",
+          "linkedin": "https://www.linkedin.com/in/qurrataayunkamil/"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/yuan.png",
+        "name": "Yuan Banny Albyan",
+        "department": "Information Technology",
+        "year": "2024",
+        "position": "Junior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/weng._136",
+          "github": "https://github.com/youone-its",
+          "linkedin": "https://www.linkedin.com/in/yuan-banny-albyan-670338312/"
+        }
+      }
+    ],
+    "Electrical": [
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/elec/hafizh.png",
+        "name": "Hafizh Agus Yudiansyah",
+        "department": "Electrical Engineering",
+        "year": "2023",
+        "position": "Head of Division",
+        "socialMedia": {
+          "instagram": "https://instagram.com/hafizhagusy",
+          "github": "https://github.com/",
+          "linkedin": "https://www.linkedin.com/in/hafizhagus/"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/elec/ikhsan.png",
+        "name": "Ikhsan Fadhilah",
+        "department": "Electrical Engineering",
+        "year": "2023",
+        "position": "Senior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Ikhsaannf",
+          "github": "https://github.com/",
+          "linkedin": "https://www.linkedin.com/in/ikhsanfadhilah/"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/elec/zamzami.png",
+        "name": "Rayhan Rizqi Zamzamy",
+        "department": "Electrical Engineering",
+        "year": "2023",
+        "position": "Senior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/han.zamzamy",
+          "github": "https://github.com/hanzamzamy",
+          "linkedin": "https://www.linkedin.com/in/hanzamzamy/"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/elec/rasya.png",
+        "name": "Muhammad Rasya Alghifari",
+        "department": "Informatics",
+        "year": "2024",
+        "position": "Junior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/galacticalhinterland",
+          "github": "https://github.com/OffensiveNut",
+          "linkedin": "https://linkedin.com/in/muhammad-rasya-alghifari-579604340/"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/elec/zahran.png",
+        "name": "Muhammad Zahran Razzaq",
+        "department": "Electrical Engineering",
+        "year": "2024",
+        "position": "Junior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/zahran_rzq",
+          "github": "https://github.com/zahran-rzq",
+          "linkedin": "https://linkedin.com/in/zahran-rzq"
+        }
+      }
+    ],
+    "Mechanical": [
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/mech/eko.png",
+        "name": "Eko Tegar Fahruddin",
+        "department": "Mechanical Engineering",
+        "year": "2022",
+        "position": "Head of Division",
+        "socialMedia": {
+          "instagram": "https://instagram.com/eko.tegar_f",
+          "github": "https://github.com/",
+          "linkedin": "https://linkedin.com/in/eko-tegar-f-58b597282"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/mech/andhika.png",
+        "name": "Andika Wahyu Vernando",
+        "department": "Electrical Engineering",
+        "year": "2022",
+        "position": "Senior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/andika_vernando63",
+          "github": "https://github.com/",
+          "linkedin": "https://www.linkedin.com/in/andika-wahyu-vernando/ "
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/mech/bagasabim.png",
+        "name": "Bagas Abimanyu",
+        "department": "Industrial Mechanical Engineering",
+        "year": "2024",
+        "position": "Junior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/bimskuy.31",
+          "github": "https://github.com/walkerj01n",
+          "linkedin": "http://www.linkedin.com/in/bagas-abimanyu-"
+        }
+      },
+      {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/mech/pyo.png",
+        "name": "Pyo Brilian Ubadah",
+        "department": "Civil Engineering",
+        "year": "2024",
+        "position": "Junior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/pyobrilian",
+          "github": "https://github.com/",
+          "linkedin": "https://linkedin.com/in/pyo-brilian-ubadah-32799b329"
+        }
+      }
+    ]
+  }
+}
