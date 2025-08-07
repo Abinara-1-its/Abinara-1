@@ -97,6 +97,18 @@
         }
       },
       {
+        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/bagas.png",
+        "name": "Bagas Surya Wirawan",
+        "department": "Electrical Engineering",
+        "year": "2022",
+        "position": "Senior Staff",
+        "socialMedia": {
+          "instagram": "https://instagram.com/bagassurya543",
+          "github": "https://github.com/bagaswizard",
+          "linkedin": "https://linkedin.com/"
+        }
+      },
+      {
         "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/nabiel.png",
         "name": "Nabiel Nizar Anwari",
         "department": "Information Technology",
