@@ -1,15 +1,15 @@
 {
   "divisionLogos": {
-    "General Manager": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/logo/logo-elec.png",
-    "Official": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/logo/logo-offc.png",
-    "Programming": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/logo/logo-prog.png",
-    "Electrical": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/logo/logo-elec.png",
-    "Mechanical": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/logo/logo-mech.png"
+    "General Manager": "/logo/logo-prog.png",
+    "Official": "/logo/logo-offc.png",
+    "Programming": "/logo/logo-prog.png",
+    "Electrical": "/logo/logo-elec.png",
+    "Mechanical": "/logo/logo-mech.png"
   },
   "teamMembers": {
     "General Manager": [
       {
-        "profilePic": "/poster-advance1.png",
+        "profilePic": "/images/teams/gm/nasywa.png",
         "name": "Nasywa Isna Shafriliya",
         "department": "Medical Technology",
         "year": "2023",
@@ -23,7 +23,7 @@
     ],
     "Official": [
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/dipta.png",
+        "profilePic": "/images/teams/offc/dipta.png",
         "name": "Dipta Sena Alfarehzi Djomi",
         "department": "Medicine",
         "year": "2024",
@@ -35,7 +35,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/alfa.png",
+        "profilePic": "/images/teams/offc/alfa.png",
         "name": "Alfa Na'ilah Ciwandani",
         "department": "Medical Technology",
         "year": "2023",
@@ -47,7 +47,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/bagas.png",
+        "profilePic": "/images/teams/offc/bagas.png",
         "name": "Bagas Rafi Dewantara",
         "department": "Information System",
         "year": "2023",
@@ -59,7 +59,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/ibnu.png",
+        "profilePic": "/images/teams/offc/ibnu.png",
         "name": "Ahmad Ibnu Athaillah",
         "department": "Information Technology",
         "year": "2024",
@@ -71,7 +71,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/offc/shinta.png",
+        "profilePic": "/images/teams/offc/shinta.png",
         "name": "Shinta Alya Ramadani",
         "department": "Information Technology",
         "year": "2024",
@@ -85,7 +85,7 @@
     ],
     "Programming": [
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/wayan.png",
+        "profilePic": "/images/teams/prog/wayan.png",
         "name": "I Wayan Firdaus Winarta Putra",
         "department": "Biomedical Engineering",
         "year": "2023",
@@ -97,7 +97,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/nabiel.png",
+        "profilePic": "/images/teams/prog/nabiel.png",
         "name": "Nabiel Nizar Anwari",
         "department": "Information Technology",
         "year": "2023",
@@ -109,7 +109,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/nasywa.png",
+        "profilePic": "/images/teams/prog/nasywa.png",
         "name": "Nasywa Isna Shafriliya",
         "department": "Medical Technology",
         "year": "2023",
@@ -121,7 +121,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/qurrata.png",
+        "profilePic": "/images/teams/prog/qurrata.png",
         "name": "Qurrata Ayun Kamil",
         "department": "Informatics",
         "year": "2024",
@@ -133,7 +133,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/prog/yuan.png",
+        "profilePic": "/images/teams/prog/yuan.png",
         "name": "Yuan Banny Albyan",
         "department": "Information Technology",
         "year": "2024",
@@ -147,7 +147,7 @@
     ],
     "Electrical": [
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/elec/hafizh.png",
+        "profilePic": "/images/teams/elec/hafizh.png",
         "name": "Hafizh Agus Yudiansyah",
         "department": "Electrical Engineering",
         "year": "2023",
@@ -159,7 +159,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/elec/ikhsan.png",
+        "profilePic": "/images/teams/elec/ikhsan.png",
         "name": "Ikhsan Fadhilah",
         "department": "Electrical Engineering",
         "year": "2023",
@@ -171,7 +171,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/elec/zamzami.png",
+        "profilePic": "/images/teams/elec/zamzami.png",
         "name": "Rayhan Rizqi Zamzamy",
         "department": "Electrical Engineering",
         "year": "2023",
@@ -183,7 +183,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/elec/rasya.png",
+        "profilePic": "/images/teams/elec/rasya.png",
         "name": "Muhammad Rasya Alghifari",
         "department": "Informatics",
         "year": "2024",
@@ -195,7 +195,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/elec/zahran.png",
+        "profilePic": "/images/teams/elec/zahran.png",
         "name": "Muhammad Zahran Razzaq",
         "department": "Electrical Engineering",
         "year": "2024",
@@ -209,7 +209,7 @@
     ],
     "Mechanical": [
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/mech/eko.png",
+        "profilePic": "/images/teams/mech/eko.png",
         "name": "Eko Tegar Fahruddin",
         "department": "Mechanical Engineering",
         "year": "2022",
@@ -221,7 +221,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/mech/andhika.png",
+        "profilePic": "/images/teams/mech/andhika.png",
         "name": "Andika Wahyu Vernando",
         "department": "Electrical Engineering",
         "year": "2022",
@@ -233,7 +233,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/mech/bagasabim.png",
+        "profilePic": "/images/teams/mech/bagasabim.png",
         "name": "Bagas Abimanyu",
         "department": "Industrial Mechanical Engineering",
         "year": "2024",
@@ -245,7 +245,7 @@
         }
       },
       {
-        "profilePic": "https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/mech/pyo.png",
+        "profilePic": "/images/teams/mech/pyo.png",
         "name": "Pyo Brilian Ubadah",
         "department": "Civil Engineering",
         "year": "2024",

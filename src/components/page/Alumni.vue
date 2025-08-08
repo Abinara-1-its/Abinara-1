@@ -56,7 +56,7 @@ export default {
   data() {
     return {
       backgroundPattern:
-        'https://raw.githubusercontent.com/bielnzar/PROG_Web-Tim/main/src/assets/images/teams/frame-foto.png',
+        '/images/teams/frame-foto.png',
       alumni: alumniData,
     }
   },
