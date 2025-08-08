@@ -134,7 +134,7 @@ export default {
 }
 
 .parallax-background {
-  background-image: url('/src/assets/images/teams/full-tim.png');
+  background-image: url('/images/teams/full-tim.png');
   filter: brightness(50%);
   height: 100vh;
   width: 100vw;
