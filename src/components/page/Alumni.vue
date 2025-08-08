@@ -2,7 +2,7 @@
   <div class="container mx-auto flex flex-col items-center px-4 py-16 mt-16 mb-10">
     <h1
       data-aos="fade-down"
-      class="lg:text-7xl font-bold leading-tight md:text-6xl sm:text-6xl md:mt-0 text-5xl gradient-text text-red-600 mb-10"
+      class="lg:text-7xl font-bold leading-tight md:text-6xl sm:text-6xl xs:text-5xl md:mt-0 text-4xl gradient-text text-red-600 mb-10"
     >
       Alumni Network
     </h1>
@@ -86,7 +86,7 @@ export default {
       },
       breakpoints: {
         640: {
-          slidesPerView: 2,
+          slidesPerView: 1,
         },
         768: {
           slidesPerView: 2,

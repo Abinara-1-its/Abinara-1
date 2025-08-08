@@ -1,16 +1,16 @@
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
+  <div class="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4 xl:mt-10 md:mt-4 mt-0">
     <h2
       data-aos="fade-down"
-      class="place-self-center mt-30 md:mt-20 3xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-2xl font-bold leading-tight gradient-text"
+      class="place-self-center mt-30 md:mt-20 3xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl xs:text-3xl text-2xl font-bold leading-tight gradient-text"
     >
       Road to Advance 2025
     </h2>
     <h4 class="text-center 3xl:text-2xl xl:text-xl lg:text-lg md:text-md sm:text-sm text-xs italic text-gray-500 mt-4 max-w-3xl" data-aos="zoom-in">“Discover. Learn. Build. Your Robotic Foundation Begins Here”</h4>
     <div class="w-full max-w-3xl p-8 space-y-6 mt-10 bg-white rounded-2xl shadow-2xl mb-30">
-      <h1 class="text-3xl font-bold text-center text-gray-900">Workshop Registration Form</h1>
-      
-      <div class="text-center">
+      <h1 class="md:text-3xl sm:text-2xl text-xl font-bold text-center text-gray-900">Workshop Registration Form</h1>
+
+      <div class="text-center text-sm sm:text-md md:text-lg 2xl:text-xl">
         <button 
           type="button" 
           @click="togglePoster" 
