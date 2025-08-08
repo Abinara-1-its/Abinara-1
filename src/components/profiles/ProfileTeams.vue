@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import defaultBackgroundPattern from '/images/teams/frame-foto.png'
+import defaultBackgroundPattern from 'https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/teams/frame-foto.png'
 
 export default {
   props: {

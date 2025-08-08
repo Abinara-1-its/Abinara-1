@@ -1,6 +1,6 @@
 [
   {
-    "profilePic": "/images/alumni/alumni_hasfi.svg",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/alumni_hasfi.svg",
     "name": "Hashfi El Muhandish",
     "department": "Electrical Engineering",
     "year": "2020",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "profilePic": "/images/alumni/alumni_nabila.svg",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/alumni_nabila.svg",
     "name": "Nabila Amalia Putri",
     "department": "Industrial Systems Engineering",
     "year": "2021",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "profilePic": "/images/alumni/alumni_hikam.svg",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/alumni_hikam.svg",
     "name": "Ahmad Ahlul Hikam",
     "department": "Electrical Engineering",
     "year": "2021",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "profilePic": "/images/alumni/alumni_shaldan.svg",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/alumni_shaldan.svg",
     "name": "Laode Shaldan Falih",
     "department": "Information Systems",
     "year": "2021",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "profilePic": "/images/alumni/alumni_ahmad.svg",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/alumni_ahmad.svg",
     "name": "Ahmad Prayoga",
     "department": "Instrumentation Engineering",
     "year": "2021",
@@ -60,7 +60,7 @@
     }
   },
   {
-    "profilePic": "/images/alumni/alumni_once.svg",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/alumni_once.svg",
     "name": "Once Oscar Archieniega",
     "department": "Mechanical Engineering",
     "year": "2021",
@@ -72,7 +72,7 @@
     }
   },
   {
-    "profilePic": "/images/teams/gm/agatha.png",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/agatha.png",
     "name": "Agatha Samuel Sitompul",
     "department": "Electrical Engineering",
     "year": "2022",
@@ -84,7 +84,7 @@
     }
   },
   {
-    "profilePic": "/images/teams/prog/bagas.png",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/bagas.png",
     "name": "Bagas Surya Wirawan",
     "department": "Electrical Engineering",
     "year": "2022",
@@ -96,7 +96,7 @@
     }
   },
   {
-    "profilePic": "/images/teams/elec/figo.png",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/figo.png",
     "name": "Figo Arzaki Maulana",
     "department": "Electrical Engineering",
     "year": "2022",
@@ -108,7 +108,7 @@
     }
   },
   {
-    "profilePic": "/images/teams/mech/faizul.png",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/faizul.png",
     "name": "Faizzul Haq Alma'anizam Zami",
     "department": "Industrial Mechanical Engineering",
     "year": "2022",
@@ -120,7 +120,7 @@
     }
   },
   {
-    "profilePic": "/images/teams/mech/danial.png",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/danial.png",
     "name": "Muhammad Danial Azka Attaqi",
     "department": "Electrical Engineering",
     "year": "2022",
@@ -132,7 +132,7 @@
     }
   },
   {
-    "profilePic": "/images/teams/mech/rayhan.png",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/rayhan.png",
     "name": "Rayhan Al Fajri",
     "department": "Mechanical Engineering",
     "year": "2022",
@@ -144,7 +144,7 @@
     }
   },
   {
-    "profilePic": "/images/teams/offc/elisza.png",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/elisza.png",
     "name": "Elisza Rahmawati",
     "department": "Chemistry",
     "year": "2022",
@@ -156,7 +156,7 @@
     }
   },
   {
-    "profilePic": "/images/teams/offc/mujianah.png",
+    "profilePic": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/alumni/mujianah.png",
     "name": "Mujianah",
     "department": "Chemistry",
     "year": "2022",
