@@ -76,7 +76,7 @@ export default {
     },
     backgroundPattern: {
       type: String,
-      default: 'https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/teams/frame-foto.png',
+      default: '/images/teams/frame-foto.png',
     },
   },
   data() {
