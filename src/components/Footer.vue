@@ -16,16 +16,16 @@
         </p>
         <!-- Medsos -->
         <div class="flex space-x-4">
-          <a href="#" class="p-1">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="p-1">
             <img src="/icons/github.png" alt="GitHub" class="h-6 icons" />
           </a>
-          <a href="#" class="p-1">
+          <a href="https://www.linkedin.com/company/abinara-1-its-robotics-team/" target="_blank" rel="noopener noreferrer" class="p-1">
             <img src="/icons/linkedin.png" alt="LinkedIn" class="h-6 icons" />
           </a>
-          <a href="#" class="p-1">
+          <a href="https://www.instagram.com/abinara.1" target="_blank" rel="noopener noreferrer" class="p-1">
             <img src="/icons/instagram.png" alt="Instagram" class="h-6 icons" />
           </a>
-          <a href="#" class="p-1">
+          <a href="https://www.tiktok.com/@abinara1its" target="_blank" rel="noopener noreferrer" class="p-1">
             <img src="/icons/tiktok.png" alt="TikTok" class="h-6 icons" />
           </a>
         </div>
@@ -66,7 +66,7 @@
         </div>
         <div class="flex items-center">
           <img src="/icons/email.png" alt="Email" class="h-6 mr-2" />
-          <a href="mailto:abinaraits1@gmail.com" class="hover:underline">abinaraits1@gmail.com</a>
+          <a href="mailto:abinaraits1@gmail.com" rel="noopener noreferrer" class="hover:underline">abinaraits1@gmail.com</a>
         </div>
       </div>
     </div>
