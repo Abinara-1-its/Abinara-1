@@ -21,7 +21,7 @@
       </div>
 
       <div v-if="isPosterVisible" class="mt-4 transition-all duration-500 ease-in-out">
-        <img src="/poster-arduino1.png" alt="Poster Workshop" class="w-full h-auto rounded-lg shadow-md">
+        <img src="/poster-advance1.png" alt="Poster Workshop" class="w-full h-auto rounded-lg shadow-md border-2 border-red-200">
       </div>
       
       <form 
@@ -126,10 +126,10 @@
                 id="paket-a"
                 name="Paket Pilihan"
                 type="checkbox"
-                value="Paket A - Materi & Sertifikat"
+                value="Paket Programming"
                 class="h-4 w-4 text-red-600 border-gray-300 rounded focus:ring-red-500 cursor-pointer"
               >
-              <label for="paket-a" class="ml-2 block text-sm text-gray-900">Paket A - Materi & Sertifikat</label>
+              <label for="paket-a" class="ml-2 block text-sm text-gray-900">Paket Programming</label>
             </div>
             <div class="flex items-center">
               <input 
@@ -137,10 +137,10 @@
                 id="paket-b"
                 name="Paket Pilihan"
                 type="checkbox"
-                value="Paket B - Materi, Sertifikat & Merchandise"
+                value="Paket Electrical"
                 class="h-4 w-4 text-red-600 border-gray-300 rounded focus:ring-red-500 cursor-pointer"
               >
-              <label for="paket-b" class="ml-2 block text-sm text-gray-900">Paket B - Materi, Sertifikat & Merchandise</label>
+              <label for="paket-b" class="ml-2 block text-sm text-gray-900">Paket Electrical</label>
             </div>
             <div class="flex items-center">
               <input 
@@ -148,17 +148,25 @@
                 id="paket-c"
                 name="Paket Pilihan"
                 type="checkbox"
-                value="Paket C - Full Access"
+                value="Paket Mechanical"
                 class="h-4 w-4 text-red-600 border-gray-300 rounded focus:ring-red-500 cursor-pointer"
               >
-              <label for="paket-c" class="ml-2 block text-sm text-gray-900">Paket C - Full Access</label>
+              <label for="paket-c" class="ml-2 block text-sm text-gray-900">Paket Mechanical</label>
             </div>
           </div>
         </div>
 
         <div class="p-4 my-4 border border-red-200 rounded-lg bg-red-50">
           <h3 class="text-lg font-semibold text-gray-800">Informasi Pembayaran</h3>
-          <p class="mt-2 text-sm text-gray-600">
+          <div class="mt-3 p-3 bg-white border border-gray-300 rounded-md">
+            <p class="font-semibold text-gray-800">Detail Harga:</p>
+            <ul class="list-disc list-inside text-sm text-gray-700 mt-1 space-y-1">
+              <li><strong>25k /material</strong> (1 paket)</li>
+              <li><strong>45k /bundling</strong> (2 paket)</li>
+              <li><strong>60k all in</strong> (semua paket)</li>
+            </ul>
+          </div>
+          <p class="mt-4 text-sm text-gray-600">
             Maaf, Dana only
           </p>
           <div class="mt-2 p-3 bg-white border border-gray-300 rounded-md">
@@ -209,12 +217,12 @@
         <button 
           type="submit"
           :disabled="isLoading"
-          class="w-full mt-6 relative overflow-hidden px-4 py-3 font-semibold text-xl text-white bg-gradient-to-r from-red-600 to-red-800 rounded-xl hover:scale-105 duration-500 ease-in-out disabled:bg-red-400 disabled:cursor-not-allowed"
+          class="w-full mt-6 px-4 py-3 font-semibold text-xl text-white rounded-xl duration-500 ease-in-out"
+          :class="isLoading 
+            ? 'bg-red-500 cursor-not-allowed animate-pulse' 
+            : 'bg-gradient-to-r from-red-600 to-red-900 cursor-pointer hover:scale-105'"
         >
-          <div v-if="isLoading" class="absolute top-0 left-0 h-full bg-red-700 transition-all duration-150 ease-linear" :style="{ width: uploadProgress + '%' }"></div>
-          <span class="relative z-10">
-            {{ isLoading ? `Mengirim... ${uploadProgress}%` : 'Yok di Submit!' }}
-          </span>
+          {{ isLoading ? 'Mohon Sabar, Lagi Ngirim...' : 'Yok di Submit!' }}
         </button>
       </form>
     </div>
@@ -224,7 +232,7 @@
 <script setup>
 import { reactive, ref, onMounted } from 'vue';
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbz_6b_eyP2DeFiwXF_WqQQPK2f2LHm6pRXbCVUFJCYbo7amwJyVlTo8SThmUfL0X_NjFA/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbztFq_YsT1Gexu0g-35-52fEYJaGjntuhrzsYdVNH-ElWHiGBBxssdAUmd0Bf_5xVtJAw/exec';
 
 const formData = reactive({
   'Nama': '',
@@ -243,7 +251,6 @@ const fileData = ref({
 });
 
 const isLoading = ref(false);
-const uploadProgress = ref(0);
 const message = ref('');
 const isError = ref(false);
 const isImagePreviewVisible = ref(false);
@@ -288,7 +295,7 @@ onMounted(() => {
     if (window.grecaptcha && window.grecaptcha.render) {
       clearInterval(checkRecaptcha);
       window.grecaptcha.render('recaptcha-widget', {
-        'sitekey': '6Lfhn5srAAAAAIB_jwOcR9zE3dEYh7dcWziAzL0w',
+        'sitekey': '6LdZIJ4rAAAAAHyYjA01c4WZl8HdPrQ7BKPhIUyO',
         'callback': onRecaptchaVerified,
       });
     }
@@ -301,17 +308,25 @@ const handleSubmit = async () => {
     if (!recaptchaToken.value) {
       message.value = 'Mohon verifikasi bahwa kamu bukan robot!';
       isError.value = true;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (formData['Paket Pilihan'].length === 0) {
+      message.value = 'Tolong pilih minimal satu paket pilihan yaa!';
+      isError.value = true;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
 
     if (!fileData.value.base64) {
     message.value = 'Upload bukti pembayaran yaa!';
     isError.value = true;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     return;
     }
 
     isLoading.value = true;
-    uploadProgress.value = 0;
     message.value = '';
     isError.value = false;
 
@@ -327,59 +342,49 @@ const handleSubmit = async () => {
     finalForm.append('g-recaptcha-response', recaptchaToken.value);
     finalForm.append('comment', honeypot.value);
 
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', scriptURL);
+    try {
+      const response = await fetch(scriptURL, { method: 'POST', body: finalForm });
+      const result = await response.json();
 
-    xhr.upload.onprogress = (event) => {
-      if (event.lengthComputable) {
-        const percentComplete = Math.round((event.loaded / event.total) * 100);
-        uploadProgress.value = percentComplete;
-      }
-    };
+      if (result.result === 'success') {
+        message.value = 'Data Anda telah berhasil terkirim. Matur Nuwun!';
+        isError.value = false;
 
-    xhr.onload = () => {
-      if (xhr.status === 200) {
-        try {
-          const result = JSON.parse(xhr.responseText);
-          if (result.result === 'success') {
-            message.value = 'Data Anda telah berhasil terkirim. Matur Nuwun!';
-            isError.value = false;
-            
-            Object.keys(formData).forEach(key => {
-              formData[key] = Array.isArray(formData[key]) ? [] : '';
-            });
-            fileData.value = { base64: '', name: '', type: '' };
-            isImagePreviewVisible.value = false;
-
-            document.getElementById('Bukti-Pembayaran').value = null;
-            
-            if (window.grecaptcha) {
-              window.grecaptcha.reset();
-            }
-            recaptchaToken.value = '';
+        Object.keys(formData).forEach(key => {
+          if (Array.isArray(formData[key])) {
+            formData[key] = [];
           } else {
-            throw new Error(result.error || 'Terjadi kesalahan.');
+            formData[key] = '';
           }
-        } catch (e) {
-          message.value = `Gagal memproses respons: ${e.message}`;
-          isError.value = true;
+        });
+        fileData.value = { base64: '', name: '', type: '' };
+        isImagePreviewVisible.value = false;
+
+        document.getElementById('Bukti-Pembayaran').value = null;
+        
+        if (window.grecaptcha) {
+          window.grecaptcha.reset();
         }
-      } else {
-        message.value = `Gagal mengirim data: Server merespons dengan status ${xhr.status}`;
-        isError.value = true;
+        recaptchaToken.value = '';
+
+        // Reload page after 5 seconds
+        // setTimeout(() => {
+        //   alert('Formulir akan dimuat ulang untuk pengisian berikutnya.');
+        //   window.location.reload();
+        // }, 5000);
+      } 
+      else {
+        throw new Error(result.error || 'Terjadi kesalahan! Tolong Laporkan via DM Instagram Kami');
       }
-      isLoading.value = false;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    xhr.onerror = () => {
-      message.value = 'Gagal mengirim data: Terjadi kesalahan jaringan.';
+    } 
+    catch (error) {
+      message.value = `Gagal mengirim data: ${error.message}`;
       isError.value = true;
+    } 
+    finally {
       isLoading.value = false;
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    xhr.send(finalForm);
+    }
 };  
 </script>
 
