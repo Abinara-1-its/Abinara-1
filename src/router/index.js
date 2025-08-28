@@ -15,7 +15,7 @@ const routes = [
   { path: '/achievement', component: Achievement, name: 'Achievement' },
   // { path: '/gallery', component: Gallery, name: 'Gallery' },
   { path: '/alumni', component: Alumni, name: 'Alumni' },
-  { path: '/advance', component: Advance, name: 'Advance' },
+  // { path: '/advance', component: Advance, name: 'Advance' },
   { path: '/:pathMatch(.*)', component: NotFound, name: 'NotFound' },
 ]
 

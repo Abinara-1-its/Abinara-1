@@ -22,7 +22,7 @@
               The team consists of students of Sepuluh Nopember Institute of Technology. one of the
               competitions that is followed is KRSRI (Kontes Robot SAR Indonesia).
             </p>
-            <router-link to="/advance" class="mt-8 inline-block" data-aos="fade-up-right">
+            <!-- <router-link to="/advance" class="mt-8 inline-block" data-aos="fade-up-right">
               <button
                 class="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-bold cursor-pointer text-white bg-gradient-to-r from-red-600 to-red-800 rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out"
               >
@@ -42,7 +42,7 @@
                   ></path>
                 </svg>
               </button>
-            </router-link>
+            </router-link> -->
           </div>
 
           <!-- Kolom Kanan: Video YouTube -->
