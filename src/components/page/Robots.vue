@@ -51,6 +51,33 @@
         </div>
       </div>
     </div>
+
+    <!-- Tombol Dump dan 3D View di bagian bawah -->
+    <div class="flex flex-col md:flex-row md:gap-20 gap-10 mt-16 mb-8" data-aos="fade-up">
+      <button
+        @click="navigateToDump"
+        class="cursor-pointer group relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 text-white px-10 py-5 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 text-lg font-bold flex items-center justify-center min-w-[280px] md:min-w-[320px]"
+      >
+        <span class="mr-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        </span>
+        View Dump
+      </button>
+      
+      <button
+        @click="navigateTo3DView"
+        class="cursor-pointer group relative overflow-hidden bg-gradient-to-r from-gray-900 to-gray-700 text-white px-10 py-5 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 text-lg font-bold flex items-center justify-center min-w-[280px] md:min-w-[320px]"
+      >
+        <span class="mr-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+          </svg>
+        </span>
+        View 3D
+      </button>
+    </div>
   </div>
 </template>
 
@@ -91,6 +118,12 @@ export default {
           robot.classList.add('animate__animated', 'animate__tada')
         })
       }, 7000)
+    },
+    navigateToDump() {
+      this.$router.push('/robot-dump')
+    },
+    navigateTo3DView() {
+      this.$router.push('/3d-view')
     },
   },
 }
