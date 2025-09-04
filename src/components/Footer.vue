@@ -16,7 +16,7 @@
         </p>
         <!-- Medsos -->
         <div class="flex space-x-4">
-          <a href="#" target="_blank" rel="noopener noreferrer" class="p-1">
+          <a href="https://github.com/Abinara1its" target="_blank" rel="noopener noreferrer" class="p-1">
             <img src="/icons/github.png" alt="GitHub" class="h-6 icons" />
           </a>
           <a href="https://www.linkedin.com/company/abinara-1-its-robotics-team/" target="_blank" rel="noopener noreferrer" class="p-1">

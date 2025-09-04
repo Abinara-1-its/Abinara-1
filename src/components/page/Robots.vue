@@ -18,35 +18,111 @@
       </NavButtons>
     </div>
 
-    <div class="flex flex-col w-full">
+    <!-- Toggle between 2D and 3D view -->
+    <div class="flex justify-center mb-8" data-aos="fade-in">
+      <div class="bg-gray-200 rounded-lg p-1 flex">
+        <button
+          @click="viewMode = '2d'"
+          :class="[
+            'px-4 py-2 rounded-md transition-all duration-200 font-medium',
+            viewMode === '2d' 
+              ? 'bg-red-600 text-white shadow-md' 
+              : 'text-gray-600 hover:text-gray-800'
+          ]"
+        >
+          2D Images
+        </button>
+        <button
+          @click="viewMode = '3d'"
+          :class="[
+            'px-4 py-2 rounded-md transition-all duration-200 font-medium',
+            viewMode === '3d' 
+              ? 'bg-red-600 text-white shadow-md' 
+              : 'text-gray-600 hover:text-gray-800'
+          ]"
+        >
+          3D Models
+        </button>
+      </div>
+    </div>
+
+    <div class="flex flex-col w-full gap-8 md:gap-16">
       <div
         v-for="(robot, index) in robots"
         :key="index"
         :id="categories[index]"
-        class="flex flex-col md:flex-row items-center md:items-start md:justify-between"
+        class="flex flex-col md:flex-row items-center md:items-start md:justify-between min-h-fit"
         :class="{ 'md:flex-row-reverse': index % 2 !== 0 }"
       >
         <!-- Deskripsi -->
         <div
           data-aos="zoom-in-up"
-          class="md:w-[50%] lg:w-[60%] bg-gradient-to-r from-red-900 to-red-500 text-white p-6 rounded-2xl shadow-2xl sm:my-20 my-10 xl:mx-20 lg:mx-10 md:mx-6 text-center md:text-left"
+          :data-aos-offset="index === 2 ? '150' : '120'"
+          :data-aos-delay="index === 2 ? '100' : '0'"
+          class="description-box md:w-[48%] lg:w-[50%] bg-gradient-to-r from-red-900 to-red-500 text-white p-6 rounded-2xl shadow-2xl my-4 md:my-8 mx-4 xl:mx-8 text-center md:text-left"
         >
           <p class="text-lg leading-relaxed font-semibold text-shadow">
             {{ robot.description }}
           </p>
         </div>
 
-        <!-- Gambar Robot -->
+        <!-- Robot Display (2D or 3D) -->
         <div
           data-aos="zoom-in-up"
-          class="md:w-[45%] lg:w-[50%] flex justify-center sm:my-6 my-2 md:mt-0"
+          :data-aos-offset="index === 2 ? '150' : '120'"
+          :data-aos-delay="index === 2 ? '200' : '100'"
+          class="md:w-[48%] lg:w-[50%] flex justify-center my-4 md:my-8 mx-4 w-full"
         >
-          <div ref="robotRefs" class="relative p-6 flex items-center justify-center">
-            <img
-              :src="robot.image"
-              :alt="robot.alt"
-              class="object-contain max-w-sm w-full h-[250px] md:h-[300px] lg:hover:scale-130 md:hover:scale-130 hover:scale-125 transition-transform ease-in-out duration-300 cursor-pointer"
-            />
+          <div ref="robotRefs" class="relative p-2 sm:p-6 flex items-center justify-center w-full">
+            <!-- 2D Image View -->
+            <div v-if="viewMode === '2d'" class="w-full flex justify-center">
+              <img
+                :src="robot.image"
+                :alt="robot.alt"
+                class="object-contain max-w-sm w-full h-[250px] md:h-[300px] lg:hover:scale-110 md:hover:scale-110 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer rounded-lg shadow-lg"
+              />
+            </div>
+
+            <!-- 3D Model View -->
+            <div v-else class="w-full min-h-[350px]">
+              <model-viewer
+                :src="robot.modelUrl"
+                :ios-src="robot.iosModelUrl"
+                :alt="robot.alt"
+                ar
+                ar-modes="scene-viewer quick-look webxr"
+                camera-controls
+                auto-rotate
+                shadow-intensity="1"
+                shadow-softness="0.75"
+                exposure="0.5"
+                environment-image="neutral"
+                camera-orbit="135deg 75deg 21m"
+                min-camera-orbit="auto auto 2m"
+                max-camera-orbit="auto auto 40m"
+                field-of-view="35deg"
+                class="w-full h-[350px] md:h-[500px] lg:h-[600px] rounded-lg mx-auto"
+                style="background-color: transparent; min-height: 350px;"
+              >
+                <div slot="poster" class="flex items-center justify-center h-full bg-gray-100 rounded-lg">
+                  <div class="text-center">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
+                    <p class="text-gray-600">Loading 3D Model...</p>
+                  </div>
+                </div>
+                
+                <!-- AR Button -->
+                <button 
+                  slot="ar-button" 
+                  class="ar-button bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg shadow-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
+                  </svg>
+                  View in AR
+                </button>
+              </model-viewer>
+            </div>
           </div>
         </div>
       </div>
@@ -83,7 +159,7 @@
 
 <script>
 import NavButtons from '../buttons/NavButtons.vue'
-import robots from '/src/assets/data/robots.json'
+import robotsData from '../../assets/data/robots.json'
 
 export default {
   components: {
@@ -93,13 +169,38 @@ export default {
     return {
       categories: ['Fiametta', 'Phynix', 'Arabot'],
       activeCategory: 'Fiametta',
-      robots: robots,
+      viewMode: '3d', // Default to 3D view
+      robots: robotsData,
     }
   },
   mounted() {
     this.startAnimationLoop()
+    this.initializeAOS()
+  },
+  watch: {
+    viewMode() {
+      // Refresh AOS when view mode changes to recalculate positions
+      this.$nextTick(() => {
+        this.initializeAOS()
+      })
+    }
   },
   methods: {
+    initializeAOS() {
+      // Refresh AOS with custom settings for better animation timing
+      this.$nextTick(() => {
+        if (typeof AOS !== 'undefined') {
+          AOS.refresh()
+        }
+        
+        // Force recalculation of element positions after a short delay
+        setTimeout(() => {
+          if (typeof AOS !== 'undefined') {
+            AOS.refresh()
+          }
+        }, 100)
+      })
+    },
     setActiveCategory(category) {
       this.activeCategory = category
       const targetElement = document.getElementById(category)
@@ -137,5 +238,59 @@ export default {
 .robot-image:hover {
   transform: scale(1.3);
   transition: all 0.3s ease-in-out;
+}
+
+/* Ensure description box fits content naturally */
+.description-box {
+  height: auto;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Custom styles for model-viewer */
+model-viewer {
+  --poster-color: transparent;
+  --progress-bar-color: #dc2626;
+  --progress-mask: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  min-height: 350px;
+  display: block;
+}
+
+model-viewer::part(default-progress-bar) {
+  background-color: #dc2626;
+  border-radius: 4px;
+}
+
+.ar-button {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 10;
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* AOS animation improvements for better timing */
+[data-aos="zoom-in-up"] {
+  transform: translate3d(0, 40px, 0) scale(0.6);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="zoom-in-up"].aos-animate {
+  transform: translate3d(0, 0, 0) scale(1);
+  opacity: 1;
 }
 </style>

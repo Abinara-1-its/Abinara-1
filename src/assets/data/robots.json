@@ -2,19 +2,25 @@
   {
     "id": "Fiametta",
     "image": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/robots/fiametta.png",
-    "alt": "Foto Fiametta",
-    "description": "Fiammetta is Indonesia's first intelligent Robodog, developed by university students. Its applications span social interaction, industry, search and rescue operations, and various sectors. Equipped with advanced sensors and artificial intelligence, Fiammetta boasts dynamic movement, facial recognition and command response capabilities, making it an ideal solution for diverse industrial applications."
+    "modelUrl": "/images/robots/3d_model/fiametta_3d.glb",
+    "iosModelUrl": "/images/robots/3d_model/fiametta_3d.usdz",
+    "alt": "3D Model Fiametta Robot",
+    "description": "Fiammetta is Indonesia's first intelligent Robodog, developed by university students. Its applications span social interaction, industry, search and rescue operations, and various sectors. Equipped with advanced sensors and artificial intelligence, Fiammetta boasts dynamic movement, facial recognition and command response capabilities, making it an ideal solution for diverse industrial applications."
   },
   {
     "id": "Phynix",
     "image": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/robots/phynix.png",
-    "alt": "Foto Phynix",
-    "description": "Phynix is an autonomous six-legged rescue robot designed for navigating challenging terrain and disaster zones. Its stable and robust movement. Phynix is an autonomous six-legged rescue robot designed for navigating challenging terrain and disaster zones. Its stable and robust movement"
+    "modelUrl": "/images/robots/3d_model/phynix_3d.glb",
+    "iosModelUrl": "/images/robots/3d_model/phynix_3d.usdz",
+    "alt": "3D Model Phynix Robot",
+    "description": "Phynix is an autonomous six-legged rescue robot designed for navigating challenging terrain and disaster zones. Its stable and robust movement capabilities make it ideal for search and rescue operations in challenging environments."
   },
   {
     "id": "Arabot",
     "image": "https://raw.githubusercontent.com/Abinara-1-its/Abinara-1/main/public/images/robots/arabot.png",
-    "alt": "Foto Arabot",
-    "description": "Arabot is an autonomous four-legged rescue robot designed for navigating challenging terrain and disaster zones. Its stable and robust movement. Phynix is an autonomous four-legged rescue robot designed for navigating challenging terrain and disaster zones. Its stable and robust movement"
+    "modelUrl": "/images/robots/3d_model/arabot_3d.glb",
+    "iosModelUrl": "/images/robots/3d_model/arabot_3d.usdz",
+    "alt": "3D Model Arabot Robot",
+    "description": "Arabot is an autonomous four-legged rescue robot designed for navigating challenging terrain and disaster zones. Its stable and robust movement capabilities make it perfect for rescue operations in difficult environments."
   }
 ]

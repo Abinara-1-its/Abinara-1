@@ -18,6 +18,11 @@ const routes = [
   { path: '/alumni', component: Alumni, name: 'Alumni' },
   { path: '/robot-dump', component: RobotDump, name: 'RobotDump' },
   // { path: '/advance', component: Advance, name: 'Advance' },
+  {
+    path: '/3d-view',
+    name: 'ThreeDView',
+    component: () => import('../components/page/ThreeDView.vue')
+  },
   { path: '/:pathMatch(.*)', component: NotFound, name: 'NotFound' },
 ]
 
