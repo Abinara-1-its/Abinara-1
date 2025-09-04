@@ -35,13 +35,13 @@
       <div class="flex justify-center items-center">
         <div class="bg-white w-full py-4 flex justify-center gap-14 z-10">
           <a :href="socialMedia.instagram" target="_blank" rel="noopener noreferrer">
-            <img src="/src/assets/icons/merah/instagram.svg" alt="Instagram" class="w-6 h-6 logo" />
+            <img src="/icons/merah/instagram.svg" alt="Instagram" class="w-6 h-6 logo" />
           </a>
           <a :href="socialMedia.github" target="_blank" rel="noopener noreferrer">
-            <img src="/src/assets/icons/merah/github.svg" alt="GitHub" class="w-6 h-6 logo" />
+            <img src="/icons/merah/github.svg" alt="GitHub" class="w-6 h-6 logo" />
           </a>
           <a :href="socialMedia.linkedin" target="_blank" rel="noopener noreferrer">
-            <img src="/src/assets/icons/merah/linkedin.svg" alt="LinkedIn" class="w-6 h-6 logo" />
+            <img src="/icons/merah/linkedin.svg" alt="LinkedIn" class="w-6 h-6 logo" />
           </a>
         </div>
       </div>
@@ -76,7 +76,7 @@ export default {
     },
     backgroundPattern: {
       type: String,
-      default: '/src/assets/images/teams/frame-foto.png',
+      default: '/images/teams/frame-foto.png',
     },
   },
   data() {

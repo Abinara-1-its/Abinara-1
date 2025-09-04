@@ -4,6 +4,7 @@ import '@vueuse/core'
 import 'swiper/vue'
 import 'swiper/modules'
 import 'swiper/css'
+import '@google/model-viewer'
 
 import { createApp } from 'vue'
 import App from './App.vue'

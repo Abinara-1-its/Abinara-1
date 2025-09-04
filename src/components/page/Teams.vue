@@ -22,7 +22,7 @@
   <div class="mb-40">
     <img
       data-aos="fade-right"
-      src="/src/assets/images/teams/logo/head-gm.png"
+      src="/images/teams/logo/head-gm.png"
       alt="General Manager"
       class="w-76 sm:w-100 md:w-110 h-auto ml-4 sm:ml-6 md:ml-10 lg:ml-20"
     />
@@ -50,7 +50,7 @@
   <div class="mb-40">
     <img
       data-aos="fade-right"
-      src="/src/assets/images/teams/logo/head-offc.png"
+      src="/images/teams/logo/head-offc.png"
       alt="Official"
       class="w-60 sm:w-70 md:w-80 h-auto mt-4 ml-4 sm:ml-6 md:ml-10 lg:ml-20"
     />
@@ -79,7 +79,7 @@
   <div class="mb-40">
     <img
       data-aos="fade-right"
-      src="/src/assets/images/teams/logo/head-prog.png"
+      src="/images/teams/logo/head-prog.png"
       alt="Programming"
       class="w-70 sm:w-90 md:w-100 h-auto mt-4 ml-4 sm:ml-6 md:ml-10 lg:ml-20"
     />
@@ -107,7 +107,7 @@
   <div class="mb-40">
     <img
       data-aos="fade-right"
-      src="/src/assets/images/teams/logo/head-elec.png"
+      src="/images/teams/logo/head-elec.png"
       alt="Electrical"
       class="w-70 sm:w-90 md:w-100 h-auto mt-4 ml-4 sm:ml-6 md:ml-10 lg:ml-20"
     />
@@ -135,7 +135,7 @@
   <div class="mb-40">
     <img
       data-aos="fade-right"
-      src="/src/assets/images/teams/logo/head-mech.png"
+      src="/images/teams/logo/head-mech.png"
       alt="Mechanical"
       class="w-70 sm:w-90 md:w-100 h-auto mt-4 ml-4 sm:ml-6 md:ml-10 lg:ml-20"
     />

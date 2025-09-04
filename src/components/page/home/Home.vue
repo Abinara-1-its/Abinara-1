@@ -2,7 +2,7 @@
   <section class="fullscreen">
     <div class="bg-white py-16">
       <div class="mx-auto px-4 xl:mx-10 lg:mx-4 mx-2">
-        <div class="flex flex-col lg:flex-row mt-30 xl:mt-0 lg:mt-0 md:mt-30 sm:mt-20 items-center justify-between">
+        <div class="flex flex-col lg:flex-row mt-20 sm:mt-60 lg:mt-20 2xl:mt-0 3xl:mt-20 items-center justify-between">
           <!-- Kolom Kiri -->
           <div class="lg:w-1/2 mb-8 md:mb-0 lg:mt-0 mt-10 lg:ml-10 sm:ml-4">
             <h1
@@ -13,7 +13,7 @@
             </h1>
             <p
               data-aos="fade-up"
-              class="mt-6 text-lg font-semibold 3xl:pr-30 2xl:pr-20 xl:pr-20 text-gray-800 leading-relaxed text-shadow"
+              class="mt-6 2xl:text-xl text-lg font-semibold 3xl:pr-30 2xl:pr-20 xl:pr-20 text-gray-800 leading-relaxed text-shadow"
             >
               Abinara-1 is a team that conducts research and competition for
               <span class="highlight"
@@ -22,7 +22,7 @@
               The team consists of students of Sepuluh Nopember Institute of Technology. one of the
               competitions that is followed is KRSRI (Kontes Robot SAR Indonesia).
             </p>
-            <router-link to="/advance" class="mt-8 inline-block" data-aos="fade-up-right">
+            <!-- <router-link to="/advance" class="mt-8 inline-block" data-aos="fade-up-right">
               <button
                 class="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-bold cursor-pointer text-white bg-gradient-to-r from-red-600 to-red-800 rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out"
               >
@@ -42,11 +42,11 @@
                   ></path>
                 </svg>
               </button>
-            </router-link>
+            </router-link> -->
           </div>
 
           <!-- Kolom Kanan: Video YouTube -->
-          <div class="lg:w-1/2 w-full p-4 lg:my-10 md:my-6 sm:my-4 " data-aos="zoom-in-left">
+          <div class="lg:w-1/2 w-full p-4 lg:my-10 md:my-6 sm:my-4 " data-aos="zoom-in-up">
             <div class="aspect-video rounded-2xl cursor-pointer overflow-hidden shadow-2xl hover:scale-102 duration-300 ease-in-out">
               <iframe
                 class="w-full h-full cursor-pointer"
@@ -134,7 +134,7 @@ export default {
 }
 
 .parallax-background {
-  background-image: url('/src/assets/images/teams/full-tim.png');
+  background-image: url('/images/teams/full-tim.png');
   filter: brightness(50%);
   height: 100vh;
   width: 100vw;

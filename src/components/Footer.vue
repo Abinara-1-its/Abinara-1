@@ -6,8 +6,8 @@
       >
         <!-- Logo -->
         <div class="flex space-x-8 mb-4">
-          <img src="../assets/icons/Logo_ITS-Putih.png" alt="Logo ITS" class="h-28" />
-          <!-- <img src="../assets/icons/logo-ukm.png" alt="Logo ITS Robotika" class="h-24" /> -->
+          <img src="/icons/Logo_ITS-Putih.png" alt="Logo ITS" class="h-28" />
+          <!-- <img src="/icons/logo-ukm.png" alt="Logo ITS Robotika" class="h-24" /> -->
         </div>
         <!-- Paragraf -->
         <p class="text-sm mb-4 text-center md:text-left">
@@ -16,17 +16,17 @@
         </p>
         <!-- Medsos -->
         <div class="flex space-x-4">
-          <a href="#" class="p-1">
-            <img src="../assets/icons/github.png" alt="GitHub" class="h-6 icons" />
+          <a href="https://github.com/Abinara1its" target="_blank" rel="noopener noreferrer" class="p-1">
+            <img src="/icons/github.png" alt="GitHub" class="h-6 icons" />
           </a>
-          <a href="#" class="p-1">
-            <img src="../assets/icons/linkedin.png" alt="LinkedIn" class="h-6 icons" />
+          <a href="https://www.linkedin.com/company/abinara-1-its-robotics-team/" target="_blank" rel="noopener noreferrer" class="p-1">
+            <img src="/icons/linkedin.png" alt="LinkedIn" class="h-6 icons" />
           </a>
-          <a href="#" class="p-1">
-            <img src="../assets/icons/instagram.png" alt="Instagram" class="h-6 icons" />
+          <a href="https://www.instagram.com/abinara.1" target="_blank" rel="noopener noreferrer" class="p-1">
+            <img src="/icons/instagram.png" alt="Instagram" class="h-6 icons" />
           </a>
-          <a href="#" class="p-1">
-            <img src="../assets/icons/tiktok.png" alt="TikTok" class="h-6 icons" />
+          <a href="https://www.tiktok.com/@abinara1its" target="_blank" rel="noopener noreferrer" class="p-1">
+            <img src="/icons/tiktok.png" alt="TikTok" class="h-6 icons" />
           </a>
         </div>
       </div>
@@ -50,7 +50,7 @@
       >
         <h2 class="text-xl font-bold mb-4">Get in Touch</h2>
         <div class="flex items-center mb-2">
-          <img src="../assets/icons/maps.png" alt="Location" class="h-6 mr-2" />
+          <img src="/icons/maps.png" alt="Location" class="h-6 mr-2" />
           <a
             href="https://g.co/kgs/q67G4Js"
             target="_blank"
@@ -61,12 +61,12 @@
           </a>
         </div>
         <div class="flex items-center mb-2">
-          <img src="../assets/icons/phone.png" alt="Phone" class="h-6 mr-2" />
+          <img src="/icons/phone.png" alt="Phone" class="h-6 mr-2" />
           <span>+62 812-1720-1066</span>
         </div>
         <div class="flex items-center">
-          <img src="../assets/icons/email.png" alt="Email" class="h-6 mr-2" />
-          <a href="mailto:abinaraits1@gmail.com" class="hover:underline">abinaraits1@gmail.com</a>
+          <img src="/icons/email.png" alt="Email" class="h-6 mr-2" />
+          <a href="mailto:abinaraits1@gmail.com" rel="noopener noreferrer" class="hover:underline">abinaraits1@gmail.com</a>
         </div>
       </div>
     </div>

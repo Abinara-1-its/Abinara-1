@@ -21,12 +21,12 @@
               <div
                 class="flex-shrink-0 gradient-box text-white rounded-full w-12 h-12 flex items-center justify-center"
               >
-                <span class="text-2xl font-bold">#</span>
+                <span class="text-2xl 2xl:text-3xl font-bold">#</span>
               </div>
               <div class="ml-4">
-                <h3 class="text-xl font-bold">{{ achievement.year }}</h3>
-                <p class="text-gray-600">{{ achievement.title }}</p>
-                <p class="text-gray-600">{{ achievement.title2 }}</p>
+                <h3 class="text-xl 2xl:text-2xl font-bold">{{ achievement.year }}</h3>
+                <p class="text-gray-600 2xl:text-xl sm:text-lg xs:text-md text-sm">{{ achievement.title }}</p>
+                <p class="text-gray-600 2xl:text-xl sm:text-lg xs:text-md text-sm">{{ achievement.title2 }}</p>
               </div>
             </div>
           </div>
