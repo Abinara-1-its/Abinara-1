@@ -20,28 +20,35 @@
 
     <!-- Toggle between 2D and 3D view -->
     <div class="flex justify-center mb-8" data-aos="fade-in">
-      <div class="bg-gray-200 rounded-lg p-1 flex">
+      <div class="relative flex w-fit items-center rounded-full bg-gray-200 p-1 shadow-inner">
+        <!-- Sliding background -->
+        <div
+          class="absolute left-1 top-1 h-[calc(100%-8px)] w-[calc(50%-4px)] rounded-full bg-gradient-to-r from-red-700 to-red-500 shadow-md transition-transform duration-300 ease-in-out"
+          :style="{ transform: viewMode === '3d' ? 'translateX(100%)' : 'translateX(0)' }"
+        ></div>
+
+        <!-- 2D Button -->
         <button
           @click="viewMode = '2d'"
-          :class="[
-            'px-4 py-2 rounded-md transition-all duration-200 font-medium',
-            viewMode === '2d' 
-              ? 'bg-red-600 text-white shadow-md' 
-              : 'text-gray-600 hover:text-gray-800'
-          ]"
+          class="relative z-10 flex items-center gap-2 rounded-full px-5 py-2 font-semibold transition-colors duration-300 focus:outline-none cursor-pointer"
+          :class="viewMode === '2d' ? 'text-white' : 'text-gray-600 hover:text-gray-800'"
         >
-          2D Images
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          2D View
         </button>
+
+        <!-- 3D Button -->
         <button
           @click="viewMode = '3d'"
-          :class="[
-            'px-4 py-2 rounded-md transition-all duration-200 font-medium',
-            viewMode === '3d' 
-              ? 'bg-red-600 text-white shadow-md' 
-              : 'text-gray-600 hover:text-gray-800'
-          ]"
+          class="relative z-10 flex items-center gap-2 rounded-full px-5 py-2 font-semibold transition-colors duration-300 focus:outline-none cursor-pointer"
+          :class="viewMode === '3d' ? 'text-white' : 'text-gray-600 hover:text-gray-800'"
         >
-          3D Models
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7l8 4" />
+          </svg>
+          3D View
         </button>
       </div>
     </div>
@@ -79,7 +86,7 @@
               <img
                 :src="robot.image"
                 :alt="robot.alt"
-                class="object-contain max-w-sm w-full h-[250px] md:h-[300px] lg:hover:scale-110 md:hover:scale-110 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer rounded-lg shadow-lg"
+                class="object-contain max-w-sm w-full h-[250px] md:h-[300px] lg:hover:scale-110 md:hover:scale-110 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer"
               />
             </div>
 
@@ -101,8 +108,8 @@
                 min-camera-orbit="auto auto 2m"
                 max-camera-orbit="auto auto 40m"
                 field-of-view="35deg"
-                class="w-full h-[350px] md:h-[500px] lg:h-[600px] rounded-lg mx-auto"
-                style="background-color: transparent; min-height: 350px;"
+                class="w-full h-[300px] md:h-[400px] lg:h-[450px] rounded-lg mx-auto"
+                style="background-color: transparent; min-height: 300px;"
               >
                 <div slot="poster" class="flex items-center justify-center h-full bg-gray-100 rounded-lg">
                   <div class="text-center">
@@ -280,17 +287,5 @@ model-viewer::part(default-progress-bar) {
 
 .animate-spin {
   animation: spin 1s linear infinite;
-}
-
-/* AOS animation improvements for better timing */
-[data-aos="zoom-in-up"] {
-  transform: translate3d(0, 40px, 0) scale(0.6);
-  opacity: 0;
-  transition-property: transform, opacity;
-}
-
-[data-aos="zoom-in-up"].aos-animate {
-  transform: translate3d(0, 0, 0) scale(1);
-  opacity: 1;
 }
 </style>

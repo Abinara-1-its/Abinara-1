@@ -8,6 +8,7 @@ import Alumni from '../components/page/Alumni.vue'
 import NotFound from '../components/page/NotFound.vue'
 import Advance  from '@/components/page/Advance.vue'
 import RobotDump from '../components/page/RobotDump.vue'
+import ThreeDView from '../components/page/ThreeDView.vue'
 
 const routes = [
   { path: '/', component: Home, name: 'Home' },
@@ -18,12 +19,8 @@ const routes = [
   { path: '/alumni', component: Alumni, name: 'Alumni' },
   { path: '/robot-dump', component: RobotDump, name: 'RobotDump' },
   // { path: '/advance', component: Advance, name: 'Advance' },
-  {
-    path: '/3d-view',
-    name: 'ThreeDView',
-    component: () => import('../components/page/ThreeDView.vue')
-  },
-  { path: '/:pathMatch(.*)', component: NotFound, name: 'NotFound' },
+  { path: '/3d-view', component: ThreeDView, name: '3d-view' },
+  { path: '/:pathMatch(.*)', component: NotFound, name: 'NotFound' }
 ]
 
 const router = createRouter({
@@ -32,7 +29,8 @@ const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
-    } else {
+    } 
+    else {
       return { top: 0 }
     }
   },

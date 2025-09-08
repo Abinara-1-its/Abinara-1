@@ -2,9 +2,9 @@
   <div class="container mx-auto px-4 py-8 md:py-16 flex flex-col items-center mt-16 md:mt-14">
     <h1
       data-aos="fade-down"
-      class="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight gradient-text text-red-600 mb-6 md:mb-12"
+      class="2xl:text-7xl lg:text-7xl font-bold leading-tight md:text-6xl sm:text-6xl md:mt-0 text-5xl gradient-text text-red-600 mb-10"
     >
-      3D VIEW
+      3D Views
     </h1>
 
     <div 
@@ -56,14 +56,6 @@ export default {
 </script>
 
 <style scoped>
-.gradient-text {
-  background: linear-gradient(45deg, #dc2626, #991b1b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Improved responsive iframe container */
 .iframe-container {
   position: relative;
   width: 100%;
@@ -83,10 +75,9 @@ export default {
   border-radius: 0.5rem;
 }
 
-/* Mobile optimizations */
 @media (max-width: 640px) {
   .iframe-container {
-    padding-bottom: 100%; /* Square aspect ratio for small screens */
+    padding-bottom: 100%;
     margin-bottom: 0.5rem;
   }
   
@@ -98,10 +89,9 @@ export default {
   }
 }
 
-/* Medium screens */
 @media (min-width: 641px) and (max-width: 1023px) {
   .iframe-container {
-    padding-bottom: 75%; /* 4:3 aspect ratio for medium screens */
+    padding-bottom: 75%;
   }
 }
 </style>
