@@ -21,6 +21,12 @@
 
 <script>
 import ProfilesTeams from '../ProfileTeams.vue'
+import Swiper from 'swiper';
+import { Navigation, Pagination, EffectCards } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-cards';
 
 export default {
   components: {
@@ -38,6 +44,7 @@ export default {
   },
   mounted() {
     new Swiper('.programming-swiper', {
+      modules: [Navigation, Pagination, EffectCards],
       slidesPerView: 1,
       spaceBetween: 10,
       effect: 'cards',
