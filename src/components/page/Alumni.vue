@@ -47,6 +47,12 @@
 <script>
 import ProfileAlumni from '../profiles/ProfileAlumni.vue'
 import alumniData from '/src/assets/data/alumni.json'
+import Swiper from 'swiper';
+import { Navigation, Pagination, Scrollbar, Autoplay, Keyboard } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 export default {
   name: 'Alumni',
@@ -62,6 +68,7 @@ export default {
   },
   mounted() {
     new Swiper('.swiper', {
+      modules: [Navigation, Pagination, Scrollbar, Autoplay, Keyboard],
       slidesPerView: 1,
       navigation: {
         nextEl: '.swiper-button-next',

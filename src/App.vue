@@ -10,8 +10,8 @@ AOS.init({
   // mirror: true,
 })
 
-onMounted(async () => {
-})
+onMounted(async () => {})
+
 </script>
 
 <template>
