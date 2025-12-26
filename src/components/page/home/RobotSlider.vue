@@ -28,17 +28,19 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import robotsData from '/src/assets/data/robots.json'
+import Swiper from 'swiper';
+import { Navigation, Pagination, EffectCube, Keyboard } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-cube';
 
 const robots = ref(robotsData)
 
 onMounted(() => {
-  let attempts = 0
-  const maxAttempts = 50
-  const checkSwiper = setInterval(() => {
-    if (window.Swiper) {
-      clearInterval(checkSwiper)
-      new window.Swiper('.robotSwiper', {
-        effect: 'cube',
+  new Swiper('.robotSwiper', {
+    modules: [Navigation, Pagination, EffectCube, Keyboard],
+    effect: 'cube',
         cubeEffect: {
           shadow: false,
           shadowOffset: 20,
@@ -60,17 +62,11 @@ onMounted(() => {
         //   delay: 5000,
         //   disableOnInteraction: true,
         // },
-        keyboard: {
-          enabled: true,
-          onlyInViewport: false,
-        },
-      })
-    } else if (attempts >= maxAttempts) {
-      clearInterval(checkSwiper)
-      console.error('Swiper error cak.')
-    }
-    attempts++
-  }, 100)
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+  })
 })
 </script>
 

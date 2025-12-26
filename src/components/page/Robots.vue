@@ -176,7 +176,7 @@ export default {
     return {
       categories: ['Fiametta', 'Phynix', 'Arabot'],
       activeCategory: 'Fiametta',
-      viewMode: '3d', // Default to 3D view
+      viewMode: '2d', // Default to 3D view
       robots: robotsData,
     }
   },

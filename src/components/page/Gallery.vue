@@ -21,7 +21,7 @@
           <img
             :src="image.src"
             :alt="image.alt"
-            class="w-full h-[300px] sm:h-[350px] md:h-[3500px] lg:h-[450px] xl:h-full object-cover lg:rounded-lg rounded-2xl shadow-xl max-h-[500px] transition-transform duration-300 ease-in-out transform px-2 lg:px-0"
+            class="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-full object-cover lg:rounded-lg rounded-2xl shadow-xl max-h-[500px] transition-transform duration-300 ease-in-out transform px-2 lg:px-0"
           />
         </div>
       </div>
@@ -42,55 +42,51 @@
 <script setup>
 import { onMounted } from 'vue'
 import images from '/src/assets/data/gallery.json'
+import Swiper from 'swiper';
+import { Navigation, Pagination, Keyboard, EffectCoverflow, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
 
 onMounted(() => {
-  let attempts = 0
-  const maxAttempts = 50
-  const checkSwiper = setInterval(() => {
-    if (window.Swiper) {
-      clearInterval(checkSwiper)
-      new window.Swiper('.mySwiper', {
-        effect: 'coverflow',
-        coverflowEffect: {
-          rotate: 30,
-          stretch: -50,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
+  new Swiper('.mySwiper', {
+    modules: [Navigation, Pagination, EffectCoverflow, Keyboard, Autoplay],
+    effect: 'coverflow',
+      coverflowEffect: {
+        rotate: 30,
+        stretch: -50,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      slidesPerView: 1,
+      spaceBetween: 15,
+      centeredSlides: true,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
         },
-        slidesPerView: 1,
-        spaceBetween: 15,
-        centeredSlides: true,
-        loop: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: true,
-        },
-        keyboard: {
-          enabled: true,
-          onlyInViewport: true,
-        },
-        breakpoints: {
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        },
-      })
-    } else if (attempts >= maxAttempts) {
-      clearInterval(checkSwiper)
-      console.error('Swiper tidak ditemukan.')
-    }
-    attempts++
-  }, 100)
+      },
+  })
 })
 </script>
 
