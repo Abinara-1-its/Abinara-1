@@ -1,5 +1,5 @@
 <template>
-  <div data-aos="fade-up" class="py-0 mt-16 bg-white">
+  <div data-aos="fade-up" class="py-0 mt-16">
     <div class="container mx-auto px-4 mt-20 md:mt-20">
       <h2
         class="place-self-center mb-10 lg:text-7xl font-bold leading-tight md:text-6xl sm:text-6xl md:mt-0 text-4xl gradient-text"
@@ -7,7 +7,7 @@
         ACHIEVEMENT
       </h2>
     </div>
-    <div class="bg-white py-12">
+    <div class="py-12">
       <div class="mx-auto px-4">
         <!-- Ubah menjadi grid -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -25,8 +25,12 @@
               </div>
               <div class="ml-4">
                 <h3 class="text-xl 2xl:text-2xl font-bold">{{ achievement.year }}</h3>
-                <p class="text-gray-600 2xl:text-xl sm:text-lg xs:text-md text-sm">{{ achievement.title }}</p>
-                <p class="text-gray-600 2xl:text-xl sm:text-lg xs:text-md text-sm">{{ achievement.title2 }}</p>
+                <p class="text-gray-600 2xl:text-xl sm:text-lg xs:text-md text-sm">
+                  {{ achievement.title }}
+                </p>
+                <p class="text-gray-600 2xl:text-xl sm:text-lg xs:text-md text-sm">
+                  {{ achievement.title2 }}
+                </p>
               </div>
             </div>
           </div>
@@ -35,17 +39,34 @@
     </div>
 
     <!-- Modal pop up -->
-    <transition name="fade">
-      <div
-        v-if="isModalOpen"
-        class="fixed inset-0 flex items-center justify-center bg-gray-300 z-50"
-        @click="closeModal"
+    <Teleport to="body">
+      <transition 
+        enter-active-class="transition duration-300 ease-out" 
+        enter-from-class="opacity-0" 
+        enter-to-class="opacity-100" 
+        leave-active-class="transition duration-200 ease-in" 
+        leave-from-class="opacity-100" 
+        leave-to-class="opacity-0"
       >
-        <transition name="scale">
-          <div
-            class="bg-white rounded-xl shadow-2xl max-w-2xl w-full overflow-hidden relative"
-            @click.stop
+        <div
+          v-if="isModalOpen"
+          class="fixed inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm z-[100]"
+          @click="closeModal"
+        >
+          <transition 
+            appear
+            enter-active-class="transition duration-300 ease-out" 
+            enter-from-class="scale-90 opacity-0" 
+            enter-to-class="scale-100 opacity-100" 
+            leave-active-class="transition duration-200 ease-in" 
+            leave-from-class="scale-100 opacity-100" 
+            leave-to-class="scale-90 opacity-0"
           >
+            <div
+              v-if="isModalOpen"
+              class="bg-white rounded-xl shadow-2xl max-w-2xl w-full mx-4 overflow-hidden relative"
+              @click.stop
+            >
             <!-- Gambar -->
             <div class="relative">
               <img
@@ -81,10 +102,11 @@
               <p class="text-gray-600 font-semibold">{{ selectedAchievement.title2 }}</p>
               <p class="text-gray-500 mt-4">{{ selectedAchievement.details }}</p>
             </div>
-          </div>
-        </transition>
-      </div>
-    </transition>
+            </div>
+          </transition>
+        </div>
+      </transition>
+    </Teleport>
   </div>
 </template>
 
@@ -100,14 +122,29 @@ export default {
       achievements,
     }
   },
+  mounted() {
+    window.addEventListener('keydown', this.handleKeydown)
+  },
+  beforeUnmount() {
+    window.removeEventListener('keydown', this.handleKeydown)
+  },
   methods: {
     openModal(achievement) {
       this.selectedAchievement = achievement
       this.isModalOpen = true
+      document.body.style.overflow = 'hidden'
     },
     closeModal() {
       this.isModalOpen = false
-      this.selectedAchievement = null
+      setTimeout(() => {
+        this.selectedAchievement = null
+      }, 300)
+      document.body.style.overflow = ''
+    },
+    handleKeydown(e) {
+      if (e.key === 'Escape' && this.isModalOpen) {
+        this.closeModal()
+      }
     },
   },
 }

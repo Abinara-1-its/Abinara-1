@@ -1,27 +1,24 @@
 <template>
-  <div class="bg-white py-20">
+  <div class="py-20">
     <div class="container mx-auto px-4 mt-20 md:mt-10 mb-20">
       <h2
         data-aos="fade-down"
-        class="place-self-center mb-20 lg:text-7xl font-bold leading-tight md:text-6xl sm:text-6xl md:mt-0 text-5xl gradient-text"
+        class="text-center lg:text-7xl font-bold leading-tight md:text-6xl sm:text-6xl xs:text-5xl md:mt-0 text-4xl gradient-text text-red-600 mb-10"
       >
         ACHIEVEMENT
       </h2>
 
       <div class="relative max-w-5xl mx-auto">
-        <!-- Garis Timeline -->
         <div
           class="absolute h-full w-1 bg-red-600 left-1/2 top-0 transform -translate-x-1/2 z-0"
         ></div>
 
-        <!-- Achievement Items -->
         <div class="relative space-y-16">
           <div
             v-for="(achievement, index) in achievements"
             :key="index"
             class="group relative flex flex-col md:flex-row items-center"
           >
-            <!-- Item Kiri -->
             <div
               data-aos="fade-up"
               class="w-full md:w-1/2 pr-0 md:pr-8 order-2 md:order-1"

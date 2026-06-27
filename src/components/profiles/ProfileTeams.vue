@@ -1,13 +1,13 @@
 <template>
   <div
-    class="bg-gray-900 rounded-3xl shadow-md w-80 h-120 relative border-2 border-black overflow-hidden mb-10 mx-auto"
+    class="bg-gray-900 rounded-3xl shadow-md w-80 h-120 relative border-2 border-black mb-10 mx-auto"
   >
     <!-- Jabatan Box -->
     <div
-      class="absolute top-2 left-1/2 transform -translate-x-1/2 bg-white rounded-full px-2 py-1 flex items-center justify-center gap-2 shadow-md z-15 max-w-full"
+      class="absolute top-2 left-1/2 transform -translate-x-1/2 bg-white rounded-full px-4 py-1.5 flex items-center justify-center gap-2 shadow-md z-[25] w-max whitespace-nowrap"
     >
-      <img :src="positionLogo" alt="Logo Divisi" class="w-6 h-6 object-contain" />
-      <span class="text-gray-900 font-semibold text-sm text-center">{{ position }}</span>
+      <img :src="positionLogo" alt="Logo Divisi" class="w-6 h-6 object-contain shrink-0" />
+      <span class="text-gray-900 font-semibold text-sm">{{ position }}</span>
     </div>
 
     <!-- Inner Box -->
@@ -47,7 +47,7 @@
     </div>
 
     <!-- Name and Department -->
-    <div class="absolute bottom-0 w-full bg-gray-900 p-4">
+    <div class="absolute bottom-0 w-full bg-gray-900 p-4 rounded-b-3xl">
       <p class="text-white font-bold text-lg text-center">{{ name }}</p>
       <p class="text-gray-300 text-sm text-center">{{ department }}</p>
     </div>

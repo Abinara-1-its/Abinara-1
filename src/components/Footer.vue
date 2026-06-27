@@ -41,6 +41,7 @@
           <li class="menu-item"><router-link to="/achievement">Achievement</router-link></li>
           <!-- <li class="menu-item"><router-link to="/gallery">Gallery</router-link></li> -->
           <li class="menu-item"><router-link to="/alumni">Alumni</router-link></li>
+          <li class="menu-item"><router-link to="/contact">Contact Us</router-link></li>
         </ul>
       </div>
 

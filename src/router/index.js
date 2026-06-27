@@ -9,6 +9,7 @@ import NotFound from '../components/page/NotFound.vue'
 import Advance  from '@/components/page/Advance.vue'
 import RobotDump from '../components/page/RobotDump.vue'
 import ThreeDView from '../components/page/ThreeDView.vue'
+import Contact from '../components/page/Contact.vue'
 
 const routes = [
   { path: '/', component: Home, name: 'Home' },
@@ -20,6 +21,7 @@ const routes = [
   { path: '/robot-dump', component: RobotDump, name: 'RobotDump' },
   // { path: '/advance', component: Advance, name: 'Advance' },
   { path: '/3d-view', component: ThreeDView, name: '3d-view' },
+  { path: '/contact', component: Contact, name: 'Contact' },
   { path: '/:pathMatch(.*)', component: NotFound, name: 'NotFound' }
 ]
 

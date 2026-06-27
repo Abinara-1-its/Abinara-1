@@ -1,5 +1,7 @@
 <template>
-  <div class="container mx-auto px-4 py-16 flex flex-col items-center mt-14">
+  <div
+    class="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-10 py-16 flex flex-col items-center mt-14"
+  >
     <h1
       data-aos="fade-down"
       class="lg:text-7xl font-bold leading-tight md:text-6xl sm:text-6xl md:mt-0 text-5xl gradient-text text-red-600"
@@ -18,50 +20,14 @@
       </NavButtons>
     </div>
 
-    <!-- Toggle between 2D and 3D view -->
-    <div class="flex justify-center mb-8" data-aos="fade-in">
-      <div class="relative flex w-fit items-center rounded-full bg-gray-200 p-1 shadow-inner">
-        <!-- Sliding background -->
-        <div
-          class="absolute left-1 top-1 h-[calc(100%-8px)] w-[calc(50%-4px)] rounded-full bg-gradient-to-r from-red-700 to-red-500 shadow-md transition-transform duration-300 ease-in-out"
-          :style="{ transform: viewMode === '3d' ? 'translateX(100%)' : 'translateX(0)' }"
-        ></div>
-
-        <!-- 2D Button -->
-        <button
-          @click="viewMode = '2d'"
-          class="relative z-10 flex items-center gap-2 rounded-full px-5 py-2 font-semibold transition-colors duration-300 focus:outline-none cursor-pointer"
-          :class="viewMode === '2d' ? 'text-white' : 'text-gray-600 hover:text-gray-800'"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          2D View
-        </button>
-
-        <!-- 3D Button -->
-        <button
-          @click="viewMode = '3d'"
-          class="relative z-10 flex items-center gap-2 rounded-full px-5 py-2 font-semibold transition-colors duration-300 focus:outline-none cursor-pointer"
-          :class="viewMode === '3d' ? 'text-white' : 'text-gray-600 hover:text-gray-800'"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7l8 4" />
-          </svg>
-          3D View
-        </button>
-      </div>
-    </div>
-
     <div class="flex flex-col w-full gap-8 md:gap-16">
       <div
         v-for="(robot, index) in robots"
         :key="index"
         :id="categories[index]"
-        class="flex flex-col md:flex-row items-center md:items-start md:justify-between min-h-fit"
+        class="flex flex-col md:flex-row items-center md:items-center md:justify-between min-h-fit"
         :class="{ 'md:flex-row-reverse': index % 2 !== 0 }"
       >
-        <!-- Deskripsi -->
         <div
           data-aos="zoom-in-up"
           :data-aos-offset="index === 2 ? '150' : '120'"
@@ -73,89 +39,176 @@
           </p>
         </div>
 
-        <!-- Robot Display (2D or 3D) -->
         <div
           data-aos="zoom-in-up"
           :data-aos-offset="index === 2 ? '150' : '120'"
           :data-aos-delay="index === 2 ? '200' : '100'"
-          class="md:w-[48%] lg:w-[50%] flex justify-center my-4 md:my-8 mx-4 w-full"
+          class="md:w-[48%] lg:w-[50%] flex items-center justify-center my-4 md:my-0 mx-4 w-full"
         >
-          <div ref="robotRefs" class="relative p-2 sm:p-6 flex items-center justify-center w-full">
-            <!-- 2D Image View -->
-            <div v-if="viewMode === '2d'" class="w-full flex justify-center">
+          <div
+            ref="robotRefs"
+            class="relative p-2 sm:p-6 flex items-center justify-center w-full cursor-pointer group"
+            @click="openModal(robot)"
+          >
+            <div class="relative w-full flex justify-center">
               <img
                 :src="robot.image"
                 :alt="robot.alt"
-                class="object-contain max-w-sm w-full h-[250px] md:h-[300px] lg:hover:scale-110 md:hover:scale-110 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer"
+                class="object-contain max-w-md w-full h-[300px] md:h-[350px] lg:h-[400px] transition-transform ease-in-out duration-300 group-hover:scale-110"
               />
-            </div>
 
-            <!-- 3D Model View -->
-            <div v-else class="w-full min-h-[350px]">
-              <model-viewer
-                :src="robot.modelUrl"
-                :ios-src="robot.iosModelUrl"
-                :alt="robot.alt"
-                ar
-                ar-modes="scene-viewer quick-look webxr"
-                camera-controls
-                auto-rotate
-                shadow-intensity="1"
-                shadow-softness="0.75"
-                exposure="0.5"
-                environment-image="neutral"
-                camera-orbit="135deg 75deg 21m"
-                min-camera-orbit="auto auto 2m"
-                max-camera-orbit="auto auto 40m"
-                field-of-view="35deg"
-                class="w-full h-[300px] md:h-[400px] lg:h-[450px] rounded-lg mx-auto"
-                style="background-color: transparent; min-height: 300px;"
+              <div
+                class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
-                <div slot="poster" class="flex items-center justify-center h-full bg-gray-100 rounded-lg">
-                  <div class="text-center">
-                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
-                    <p class="text-gray-600">Loading 3D Model...</p>
-                  </div>
-                </div>
-                
-                <!-- AR Button -->
-                <button 
-                  slot="ar-button" 
-                  class="ar-button bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg shadow-lg transition-colors duration-200 flex items-center gap-2"
+                <div
+                  class="bg-black/60 backdrop-blur-sm px-6 py-3 rounded-full flex items-center gap-3 shadow-[0_0_15px_rgba(220,38,38,0.6)] border border-red-500 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
-                  </svg>
-                  View in AR
-                </button>
-              </model-viewer>
+                  <span class="text-white font-bold tracking-wide">Click to View in 3D</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Tombol Dump dan 3D View di bagian bawah -->
+    <Teleport to="body">
+      <transition
+        enter-active-class="transition duration-300 ease-out"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-active-class="transition duration-200 ease-in"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
+      >
+        <div
+          v-if="isModalOpen"
+          class="fixed inset-0 z-[100] bg-white/95 backdrop-blur-md flex items-center justify-center"
+          @click="closeModal"
+        >
+          <div class="w-full h-full p-4 md:p-8 flex flex-col" @click.stop>
+            <div class="w-full flex justify-between items-center mb-4 shrink-0">
+              <h2
+                class="text-3xl md:text-5xl font-bold text-gray-900 font-tech uppercase tracking-widest"
+              >
+                {{ selectedRobot?.alt || 'Robot Model' }}
+              </h2>
+
+              <button
+                @click="closeModal"
+                class="text-gray-600 hover:text-white bg-gray-200 hover:bg-red-600 p-3 rounded-full transition-all duration-300 cursor-pointer shadow-md"
+                title="Tutup (ESC)"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <model-viewer
+              v-if="selectedRobot"
+              :src="selectedRobot.modelUrl"
+              :ios-src="selectedRobot.iosModelUrl"
+              :alt="selectedRobot.alt"
+              ar
+              ar-modes="scene-viewer quick-look webxr"
+              camera-controls
+              auto-rotate
+              shadow-intensity="1.5"
+              shadow-softness="0.5"
+              exposure="1"
+              environment-image="neutral"
+              camera-orbit="135deg 75deg 21m"
+              min-camera-orbit="auto auto 1m"
+              max-camera-orbit="auto auto 50m"
+              field-of-view="35deg"
+              class="w-full h-full max-h-[85vh] outline-none z-[105]"
+              style="background-color: transparent"
+            >
+              <div slot="poster" class="flex flex-col items-center justify-center h-full">
+                <div
+                  class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-red-600 mb-6"
+                ></div>
+                <p class="text-gray-800 text-xl font-tech tracking-wider animate-pulse">
+                  MEMUAT MODEL 3D...
+                </p>
+              </div>
+
+              <button
+                slot="ar-button"
+                class="absolute bottom-10 right-10 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl shadow-[0_0_15px_rgba(220,38,38,0.5)] transition-colors duration-200 flex items-center gap-2 font-bold text-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
+                  />
+                </svg>
+                View in AR
+              </button>
+            </model-viewer>
+          </div>
+        </div>
+      </transition>
+    </Teleport>
+
     <div class="flex flex-col md:flex-row md:gap-20 gap-10 mt-16 mb-8" data-aos="fade-up">
       <button
         @click="navigateToDump"
         class="cursor-pointer group relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 text-white px-10 py-5 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 text-lg font-bold flex items-center justify-center min-w-[280px] md:min-w-[320px]"
       >
         <span class="mr-3">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />
           </svg>
         </span>
         View Dump
       </button>
-      
+
       <button
         @click="navigateTo3DView"
         class="cursor-pointer group relative overflow-hidden bg-gradient-to-r from-gray-900 to-gray-700 text-white px-10 py-5 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 text-lg font-bold flex items-center justify-center min-w-[280px] md:min-w-[320px]"
       >
         <span class="mr-3">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
+            />
           </svg>
         </span>
         View 3D
@@ -176,21 +229,18 @@ export default {
     return {
       categories: ['Fiametta', 'Phynix', 'Arabot'],
       activeCategory: 'Fiametta',
-      viewMode: '2d', // Default to 3D view
       robots: robotsData,
+      isModalOpen: false,
+      selectedRobot: null,
     }
   },
   mounted() {
     this.startAnimationLoop()
     this.initializeAOS()
+    window.addEventListener('keydown', this.handleKeydown)
   },
-  watch: {
-    viewMode() {
-      // Refresh AOS when view mode changes to recalculate positions
-      this.$nextTick(() => {
-        this.initializeAOS()
-      })
-    }
+  beforeUnmount() {
+    window.removeEventListener('keydown', this.handleKeydown)
   },
   methods: {
     initializeAOS() {
@@ -199,7 +249,7 @@ export default {
         if (typeof AOS !== 'undefined') {
           AOS.refresh()
         }
-        
+
         // Force recalculation of element positions after a short delay
         setTimeout(() => {
           if (typeof AOS !== 'undefined') {
@@ -213,6 +263,23 @@ export default {
       const targetElement = document.getElementById(category)
       if (targetElement) {
         targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }
+    },
+    openModal(robot) {
+      this.selectedRobot = robot
+      this.isModalOpen = true
+      document.body.style.overflow = 'hidden' // Prevent background scrolling
+    },
+    closeModal() {
+      this.isModalOpen = false
+      setTimeout(() => {
+        this.selectedRobot = null
+      }, 300) // Wait for transition to finish
+      document.body.style.overflow = '' // Restore scrolling
+    },
+    handleKeydown(e) {
+      if (e.key === 'Escape' && this.isModalOpen) {
+        this.closeModal()
       }
     },
     startAnimationLoop() {
@@ -247,7 +314,6 @@ export default {
   transition: all 0.3s ease-in-out;
 }
 
-/* Ensure description box fits content naturally */
 .description-box {
   height: auto;
   min-height: fit-content;
@@ -256,7 +322,6 @@ export default {
   justify-content: center;
 }
 
-/* Custom styles for model-viewer */
 model-viewer {
   --poster-color: transparent;
   --progress-bar-color: #dc2626;

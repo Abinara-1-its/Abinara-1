@@ -1,6 +1,6 @@
 <template>
   <section class="fullscreen">
-    <div class="bg-white py-16">
+    <div class="py-16">
       <div class="mx-auto px-4 xl:mx-10 lg:mx-4 mx-2">
         <div class="flex flex-col lg:flex-row mt-20 sm:mt-60 lg:mt-20 2xl:mt-0 3xl:mt-20 items-center justify-between">
           <!-- Kolom Kiri -->

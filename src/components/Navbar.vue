@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-white shadow-lg fixed w-full z-50">
+  <nav class="bg-white/80 backdrop-blur-md shadow-lg fixed w-full z-50">
     <div class="max-w-screen mx-auto lg:px-16 md:px-10 sm:px-8 px-4 2xl:py-4 sm:py-3 py-2">
       <div class="flex justify-between items-center h-16">
 
@@ -60,6 +60,7 @@ export default {
         { title: 'Robots', path: '/robots' },
         { title: 'Achievement', path: '/achievement' },
         { title: 'Alumni', path: '/alumni' },
+        { title: 'Contact Us', path: '/contact' },
       ],
     }
   },
