@@ -69,7 +69,7 @@ export default {
     new Swiper('.swiper', {
       modules: [Navigation, Pagination, Scrollbar, Autoplay, Keyboard],
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 30,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
