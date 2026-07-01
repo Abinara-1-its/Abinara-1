@@ -1,28 +1,31 @@
 <template>
-  <nav class="bg-white/80 backdrop-blur-md shadow-lg fixed w-full z-50">
-    <div class="max-w-screen mx-auto lg:px-16 md:px-10 sm:px-8 px-4 2xl:py-4 sm:py-3 py-2">
-      <div class="flex justify-between items-center h-16">
+  <div class="fixed w-full top-0 z-50">
+    <!-- Desktop & Top Navbar -->
+    <div class="bg-white/80 backdrop-blur-md shadow-lg w-full relative z-50">
+      <div class="max-w-screen mx-auto lg:px-16 md:px-10 sm:px-8 px-4 2xl:py-4 sm:py-3 py-2">
+        <div class="flex justify-between items-center h-16">
 
-        <router-link to="/">
-          <img src="/LogoAbinara-Merah.png" class="logo h-18" />
-        </router-link>
-
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex lg:space-x-6 md:space-x-3">
-          <router-link
-            v-for="(item, index) in menuItems"
-            :key="index"
-            :to="item.path"
-            class="menu-item text-gray-700 hover:text-red-600 px-3 py-2 text-md font-medium transition-colors"
-            active-class="text-red-600 border-3 rounded-2xl border-red-600"
-          >
-            {{ item.title }}
+          <router-link to="/">
+            <img src="/LogoAbinara-Merah.png" class="logo h-18" />
           </router-link>
-        </div>
 
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-          <ButtonMobile @toggle="isOpen = !isOpen" :is-open="isOpen" />
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex lg:space-x-6 md:space-x-3">
+            <router-link
+              v-for="(item, index) in menuItems"
+              :key="index"
+              :to="item.path"
+              class="menu-item text-gray-700 hover:text-red-600 px-3 py-2 text-md font-medium transition-colors"
+              active-class="text-red-600 border-3 rounded-2xl border-red-600"
+            >
+              {{ item.title }}
+            </router-link>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <ButtonMobile @toggle="isOpen = !isOpen" :is-open="isOpen" />
+          </div>
         </div>
       </div>
     </div>
@@ -41,7 +44,7 @@
         </li>
       </ul>
     </nav>
-  </nav>
+  </div>
 </template>
 
 <script>
